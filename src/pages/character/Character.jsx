@@ -36,12 +36,6 @@ const Character = () => {
     <main className="character">
       <div className="container">
         <div className="character-info">
-          <div className="image">
-            <img
-              src={`${dataChar.thumbnail.path}.${dataChar.thumbnail.extension}`}
-              alt=""
-            />
-          </div>
           <div className="description">
             <h2>{dataChar.name}</h2>
             <p>{dataChar.description}</p>
