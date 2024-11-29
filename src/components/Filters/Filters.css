@@ -1,0 +1,20 @@
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  .search-bar {
+    height: 45px;
+    width: 500px;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: white;
+  }
+
+  .selected {
+    font-weight: bold;
+  }
+}

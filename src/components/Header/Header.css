@@ -1,0 +1,67 @@
+.container {
+  margin: 0 auto;
+}
+
+header {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+    img {
+      height: 90px;
+    }
+
+    nav {
+      position: relative;
+      display: flex;
+      gap: 2rem;
+
+      .nav-item {
+        position: relative;
+        font-size: 18px;
+        text-decoration: none;
+        color: #aaa;
+        transition: color 0.3s ease;
+      }
+
+      .nav-item:hover {
+        color: #fff;
+      }
+
+      .nav-item::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #ff0055;
+        transition: all 0.3s ease;
+      }
+      .nav-item:hover::after,
+      .nav-item:focus::after {
+        width: 100%;
+      }
+    }
+
+    .connect {
+      position: relative;
+      display: flex;
+      gap: 2rem;
+
+      a,
+      button {
+        font-size: 18px;
+        color: #aaa;
+        transition: color 0.3s ease;
+      }
+
+      a:hover,
+      button:hover {
+        color: #fff;
+      }
+    }
+  }
+}

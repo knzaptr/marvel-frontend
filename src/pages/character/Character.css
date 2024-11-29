@@ -1,0 +1,41 @@
+.character {
+  .character-info {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+
+    .image {
+      width: 100vw;
+      height: 200px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .character-comics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    row-gap: 100px;
+
+    .comic-char {
+      width: calc(200px - 60px);
+      height: 100px;
+
+      .image {
+        width: calc(200px - 60px);
+        height: 100px;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

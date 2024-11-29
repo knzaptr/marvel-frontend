@@ -1,0 +1,13 @@
+.characters-page {
+  padding: 20px;
+
+  .characters {
+    position: relative;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+  }
+}

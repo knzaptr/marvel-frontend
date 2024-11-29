@@ -1,0 +1,32 @@
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.93), rgba(0, 0, 0, 0.93)),
+    url("./assets/img/comics.jpg");
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    margin: 0 auto;
+    max-width: 700px;
+  }
+}
