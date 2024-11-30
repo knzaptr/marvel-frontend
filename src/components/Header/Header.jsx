@@ -12,7 +12,7 @@ const Header = ({ token, setToken }) => {
           <img src={MarvelLogo} alt="" />
         </Link>
         <nav>
-          <Link className="nav-item" data-target="first" to="/characters">
+          <Link className="nav-item" data-target="first" to="/">
             Personnages
           </Link>
           <Link className="nav-item" data-target="second" to="/comics">

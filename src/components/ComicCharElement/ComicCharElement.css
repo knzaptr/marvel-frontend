@@ -31,7 +31,6 @@
     position: relative;
     padding: 10px 15px;
     text-align: center;
-    color: #fff;
     visibility: hidden;
     opacity: 0;
     transition: 0.5s;
@@ -48,8 +47,24 @@
     }
 
     .description {
-      height: 50px;
+      height: 45px;
+      font-size: 15px;
       overflow: hidden;
+    }
+
+    a {
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      span {
+        font-style: italic;
+      }
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   }
 }

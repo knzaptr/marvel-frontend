@@ -31,7 +31,7 @@ const Character = () => {
     fetchData();
   }, [characterId]);
   return isLoading ? (
-    <div>chargement</div>
+    <main>chargement</main>
   ) : (
     <main className="character">
       <div className="container">
@@ -48,7 +48,7 @@ const Character = () => {
                 key={comic._id}
                 image={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
                 title={comic.title}
-                linkTo={`/comics/${comic._id}`}
+                linkTo={`/comic/${comic._id}`}
                 type="comic"
                 favObject={comic}
               />

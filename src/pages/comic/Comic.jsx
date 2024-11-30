@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "./Comic.css";
+
 const Comic = () => {
   const { comicId } = useParams();
   const [data, setData] = useState(null);
@@ -25,9 +27,9 @@ const Comic = () => {
   }, [comicId]);
 
   return isLoading ? (
-    <div>chargement</div>
+    <main>chargement</main>
   ) : (
-    <main className="comic">
+    <main className="comic-page">
       <div className="container">
         <div className="comic">
           <div className="image">
@@ -36,8 +38,10 @@ const Comic = () => {
               alt=""
             />
           </div>
-          <h2>{data.title}</h2>
-          <p>{data.description}</p>
+          <div className="content">
+            <h2>{data.title}</h2>
+            <p>{data.description}</p>
+          </div>
         </div>
       </div>
     </main>

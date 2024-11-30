@@ -1,14 +1,20 @@
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.93), rgba(0, 0, 0, 0.93)),
     url("./assets/img/comics.jpg");
-  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 #root {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+}
+
+main {
+  flex: 1;
 }
 
 .container {
@@ -40,7 +46,6 @@ a:hover {
   .container {
     margin: 0 auto;
     max-width: 100%;
-    border: red solid;
   }
   body {
     overflow: hidden;

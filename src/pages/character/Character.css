@@ -16,7 +16,8 @@
     display: flex;
     overflow: scroll;
     width: 100%;
-    padding-top: 150px;
+    padding-top: 140px;
+    padding-bottom: 50px;
     gap: 20px;
   }
 }

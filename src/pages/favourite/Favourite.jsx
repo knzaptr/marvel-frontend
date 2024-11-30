@@ -32,7 +32,7 @@ const Favourite = ({ token }) => {
 
   return token ? (
     isLoading ? (
-      <div>Chargement</div>
+      <main>Chargement</main>
     ) : (
       <main className="favourite-page">
         <div className="container">

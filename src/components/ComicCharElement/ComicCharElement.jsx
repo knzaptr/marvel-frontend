@@ -1,11 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
 import { CgHeart } from "react-icons/cg";
-import { VscHeartFilled } from "react-icons/vsc";
+// import { VscHeartFilled } from "react-icons/vsc";
 import NotFoundImg from "../../assets/img/not_found.webp";
 import "./ComicCharElement.css";
 import axios from "axios";
 import Cookies from "js-cookie";
-import { useState } from "react";
 
 const ComicCharElement = ({
   title,
@@ -43,11 +42,10 @@ const ComicCharElement = ({
         />
       </div>
       <div className="content">
-        <h2 className="title">{title}</h2>
-        {description && <p className="description">{description}</p>}
-
         <Link className="comic-char-link" to={linkTo}>
-          See more
+          <h2 className="title">{title}</h2>
+          {description && <p className="description">{description}</p>}
+          <span>See more</span>
         </Link>
 
         <button className="addfav" onClick={addToFav}>

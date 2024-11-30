@@ -62,7 +62,7 @@ const Characters = () => {
   }, [limit, page, search]);
 
   return isLoading ? (
-    <div>chargement</div>
+    <main>chargement</main>
   ) : (
     <main className="characters-page">
       <div className="container">
