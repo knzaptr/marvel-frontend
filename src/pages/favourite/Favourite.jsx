@@ -7,6 +7,7 @@ import "./Favourite.css";
 const Favourite = ({ token }) => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [refreshTrigger, setRefreshTrigger] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,7 +20,6 @@ const Favourite = ({ token }) => {
             },
           }
         );
-
         setData(response.data.results);
         setIsLoading(false);
       } catch (error) {
@@ -28,7 +28,7 @@ const Favourite = ({ token }) => {
     };
 
     fetchData();
-  }, [token, data]);
+  }, [token, refreshTrigger]);
 
   return token ? (
     isLoading ? (

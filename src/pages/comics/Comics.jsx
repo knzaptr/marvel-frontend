@@ -19,19 +19,27 @@ const Comics = () => {
     let nbpage = Math.ceil(nbTotal / limit);
     if (nbpage > 1) {
       for (let i = 1; i <= nbpage; i++) {
-        pageButton.push(
-          <button
-            key={i}
-            className={page === i ? "selected" : ""}
-            onClick={() => {
-              setPage(i);
-            }}
-          >
-            {i}
-          </button>
-        );
+        if (i === 1 || i === nbpage || (i >= page - 4 && i <= page + 4)) {
+          pageButton.push(
+            <button
+              key={i}
+              className={page === i ? "selected" : ""}
+              onClick={() => {
+                setPage(i);
+              }}
+            >
+              {i}
+            </button>
+          );
+        }
       }
 
+      if (page >= 7) {
+        pageButton.splice(1, 0, <span>...</span>);
+      }
+      if (page <= nbpage - 6) {
+        pageButton.splice(pageButton.length - 1, 0, <span>...</span>);
+      }
       return pageButton;
     }
   };
@@ -71,6 +79,7 @@ const Comics = () => {
           setLimit={setLimit}
           setSearch={setSearch}
           search={search}
+          setPage={setPage}
         />
         <div className="comics">
           {data.results.map((comic) => {

@@ -28,6 +28,25 @@ a:hover {
   cursor: pointer;
 }
 
+.page-number {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 15px;
+  }
+
+  .selected {
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
+
 @media (max-width: 1200px) {
   .container {
     margin: 0 auto;
