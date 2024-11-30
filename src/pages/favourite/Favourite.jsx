@@ -36,7 +36,6 @@ const Favourite = ({ token }) => {
     ) : (
       <main className="favourite-page">
         <div className="container">
-          <h1>Favoris</h1>
           <div className="favourites">
             {data.map((fav) => {
               return fav.type === "character" ? (

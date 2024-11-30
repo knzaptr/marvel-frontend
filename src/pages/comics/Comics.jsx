@@ -66,7 +66,6 @@ const Comics = () => {
   ) : (
     <main className="comics-page">
       <div className="container">
-        <h1>Comics</h1>
         <Filters
           limit={limit}
           setLimit={setLimit}

@@ -1,5 +1,5 @@
 import "./Filters.css";
-const Filters = ({ limit, setLimit, setSearch, search }) => {
+const Filters = ({ limit, setLimit, setSearch, search, setPage }) => {
   console.log(limit);
 
   return (
@@ -7,6 +7,7 @@ const Filters = ({ limit, setLimit, setSearch, search }) => {
       <input
         className="search-bar"
         type="text"
+        placeholder="Miles Morales"
         onChange={(event) => {
           setSearch(event.target.value);
         }}
@@ -17,6 +18,7 @@ const Filters = ({ limit, setLimit, setSearch, search }) => {
         <button
           onClick={() => {
             setLimit(20);
+            setPage(1);
           }}
           className={limit === 20 ? "selected" : ""}
         >
@@ -25,6 +27,7 @@ const Filters = ({ limit, setLimit, setSearch, search }) => {
         <button
           onClick={() => {
             setLimit(40);
+            setPage(1);
           }}
           className={limit === 40 ? "selected" : ""}
         >
@@ -33,6 +36,7 @@ const Filters = ({ limit, setLimit, setSearch, search }) => {
         <button
           onClick={() => {
             setLimit(100);
+            setPage(1);
           }}
           className={limit === 100 ? "selected" : ""}
         >

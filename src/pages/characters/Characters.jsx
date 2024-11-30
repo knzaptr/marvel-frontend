@@ -66,12 +66,12 @@ const Characters = () => {
   ) : (
     <main className="characters-page">
       <div className="container">
-        <h1>Personnage</h1>
         <Filters
           limit={limit}
           setLimit={setLimit}
           setSearch={setSearch}
           search={search}
+          setPage={setPage}
         />
         <div className="characters">
           {data.results.map((character) => {
