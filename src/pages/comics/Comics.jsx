@@ -78,7 +78,7 @@ const Comics = () => {
             return (
               <ComicCharElement
                 key={comic._id}
-                linkTo={`/comics/${comic._id}`}
+                linkTo={`/comic/${comic._id}`}
                 image={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
                 title={comic.title}
                 description={comic.description}

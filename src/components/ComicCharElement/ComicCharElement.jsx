@@ -1,9 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
 import { CgHeart } from "react-icons/cg";
+import { VscHeartFilled } from "react-icons/vsc";
 import NotFoundImg from "../../assets/img/not_found.webp";
 import "./ComicCharElement.css";
 import axios from "axios";
 import Cookies from "js-cookie";
+import { useState } from "react";
 
 const ComicCharElement = ({
   title,

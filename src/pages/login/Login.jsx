@@ -47,7 +47,7 @@ const Login = ({ setToken }) => {
     }
   };
   return (
-    <main>
+    <main className="login-page">
       <div className="login">
         <h1>Se connecter</h1>
         <form method="post" onSubmit={handleSubmit}>

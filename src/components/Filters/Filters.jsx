@@ -13,6 +13,7 @@ const Filters = ({ limit, setLimit, setSearch, search }) => {
         value={search}
       />
       <div className="nbPerPage">
+        <span>Afficher par</span>
         <button
           onClick={() => {
             setLimit(20);

@@ -42,7 +42,7 @@ const Favourite = ({ token }) => {
               return fav.type === "character" ? (
                 <ComicCharElement
                   key={fav.favouriteCharCom._id}
-                  linkTo={`/characters/${fav.favouriteCharCom._id}`}
+                  linkTo={`/character/${fav.favouriteCharCom._id}`}
                   image={`${fav.favouriteCharCom.thumbnail.path}.${fav.favouriteCharCom.thumbnail.extension}`}
                   title={fav.favouriteCharCom.name}
                   description={fav.favouriteCharCom.description}
@@ -52,7 +52,7 @@ const Favourite = ({ token }) => {
               ) : (
                 <ComicCharElement
                   key={fav.favouriteCharCom._id}
-                  linkTo={`/comics/${fav.favouriteCharCom._id}`}
+                  linkTo={`/comic/${fav.favouriteCharCom._id}`}
                   image={`${fav.favouriteCharCom.thumbnail.path}.${fav.favouriteCharCom.thumbnail.extension}`}
                   title={fav.favouriteCharCom.title}
                   description={fav.favouriteCharCom.description}

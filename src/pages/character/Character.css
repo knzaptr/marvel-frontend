@@ -1,41 +1,22 @@
 .character {
   .character-info {
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
+    h2 {
+      font-size: 150px;
+      color: #ed181fdc;
+    }
 
-    .image {
-      width: 100vw;
-      height: 200px;
-
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
+    p {
+      font-size: 30px;
+      color: white;
+      padding-top: 40px;
     }
   }
 
   .character-comics {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    overflow: scroll;
+    width: 100%;
+    padding-top: 150px;
     gap: 20px;
-    row-gap: 100px;
-
-    .comic-char {
-      width: calc(200px - 60px);
-      height: 100px;
-
-      .image {
-        width: calc(200px - 60px);
-        height: 100px;
-        img {
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-        }
-      }
-    }
   }
 }

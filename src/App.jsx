@@ -24,8 +24,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/characters" element={<Characters />} />
           <Route path="/comics" element={<Comics />} />
-          <Route path="/comics/:comicId" element={<Comic />} />
-          <Route path="/characters/:characterId" element={<Character />} />
+          <Route path="/comic/:comicId" element={<Comic />} />
+          <Route path="/character/:characterId" element={<Character />} />
           <Route path="/signup" element={<Signup setToken={setToken} />} />
           <Route path="/login" element={<Login setToken={setToken} />} />
           <Route path="favourite" element={<Favourite token={token} />} />

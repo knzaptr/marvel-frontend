@@ -2,10 +2,15 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.93), rgba(0, 0, 0, 0.93)),
     url("./assets/img/comics.jpg");
   height: 100vh;
+}
+
+#root {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
 .container {
   margin: 0 auto;
   max-width: 1200px;
@@ -28,5 +33,16 @@ a:hover {
   .container {
     margin: 0 auto;
     max-width: 700px;
+  }
+}
+
+@media (max-width: 769px) {
+  .container {
+    margin: 0 auto;
+    max-width: 100%;
+    border: red solid;
+  }
+  body {
+    overflow: hidden;
   }
 }

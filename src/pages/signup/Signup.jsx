@@ -35,7 +35,7 @@ const Signup = ({ setToken }) => {
   };
 
   return (
-    <main>
+    <main className="signup-page">
       <div className="signup">
         <h1>S'inscrire</h1>
         <form method="post" onSubmit={handleSubmit}>
