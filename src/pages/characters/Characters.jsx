@@ -16,17 +16,25 @@ const Characters = () => {
 
   let pageButton = [];
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const pageNo = () => {
     let nbpage = Math.ceil(nbTotal / limit);
     if (nbpage > 1) {
       for (let i = 1; i <= nbpage; i++) {
-        if (i === 1 || i === nbpage || (i >= page - 4 && i <= page + 4)) {
+        if (i === 1 || i === nbpage || (i >= page - 1 && i <= page + 1)) {
           pageButton.push(
             <button
               key={i}
               className={page === i ? "selected" : ""}
               onClick={() => {
                 setPage(i);
+                scrollToTop();
               }}
             >
               {i}
@@ -34,10 +42,10 @@ const Characters = () => {
           );
         }
       }
-      if (page >= 7) {
+      if (page >= 4) {
         pageButton.splice(1, 0, <span key={"span-1"}>...</span>);
       }
-      if (page <= nbpage - 6) {
+      if (page <= nbpage - 3) {
         pageButton.splice(
           pageButton.length - 1,
           0,
