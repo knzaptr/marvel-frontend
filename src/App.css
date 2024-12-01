@@ -15,6 +15,7 @@ body {
 
 main {
   flex: 1;
+  padding-top: 30px;
 }
 
 .container {
@@ -45,6 +46,11 @@ a:hover {
     font-size: 25px;
     font-weight: bold;
   }
+}
+
+.error-message {
+  color: red;
+  font-style: italic;
 }
 
 @media (max-width: 1200px) {

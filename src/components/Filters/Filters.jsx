@@ -1,7 +1,5 @@
 import "./Filters.css";
 const Filters = ({ limit, setLimit, setSearch, search, setPage }) => {
-  console.log(limit);
-
   return (
     <div className="filters">
       <input

@@ -34,10 +34,14 @@ const Characters = () => {
         }
       }
       if (page >= 7) {
-        pageButton.splice(1, 0, <span>...</span>);
+        pageButton.splice(1, 0, <span key={"span-1"}>...</span>);
       }
       if (page <= nbpage - 6) {
-        pageButton.splice(pageButton.length - 1, 0, <span>...</span>);
+        pageButton.splice(
+          pageButton.length - 1,
+          0,
+          <span key={"span-2"}>...</span>
+        );
       }
       return pageButton;
     }

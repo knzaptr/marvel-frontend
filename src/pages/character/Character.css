@@ -17,7 +17,19 @@
     overflow: scroll;
     width: 100%;
     padding-top: 140px;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     gap: 20px;
+  }
+
+  .character-comics::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.character {
+  @media (max-width: 769px) {
+    h2 {
+      font-size: 100px !important;
+    }
   }
 }
