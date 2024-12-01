@@ -68,7 +68,7 @@
     }
   }
 }
-/* .comic-char:hover {
+.comic-char:hover {
   height: 20rem;
 
   .content {
@@ -83,7 +83,7 @@
     left: 20px;
     right: 20px;
   }
-} */
+}
 
 @media (max-width: 1200px) {
   .comic-char {
@@ -97,13 +97,13 @@
     }
   }
 
-  /* .comic-char:hover {
+  .comic-char:hover {
     height: 27rem;
 
     img {
       width: calc(880px / 4);
     }
-  } */
+  }
 }
 
 @media (max-width: 1024px) {
@@ -118,11 +118,11 @@
     }
   }
 
-  /* .comic-char:hover {
+  .comic-char:hover {
     height: 27rem;
 
     img {
       width: calc(600px / 2);
     }
-  } */
+  }
 }
