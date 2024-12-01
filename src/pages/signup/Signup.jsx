@@ -11,6 +11,7 @@ const Signup = ({ setToken }) => {
     email: "",
     newsletter: false,
   });
+  const [errorMessage, setErrorMessage] = useState(null);
 
   const navigate = useNavigate();
 
@@ -31,6 +32,11 @@ const Signup = ({ setToken }) => {
       setToken(Cookies.get("token"));
       navigate("/");
     } catch (error) {
+      if (error.response.status === 409) {
+        setErrorMessage("Cette adresse mail est déjà utilisée.");
+      } else {
+        setErrorMessage("Une erreur est survenue, veuillez réessayer !");
+      }
       console.log(error.response);
     }
   };
@@ -48,6 +54,7 @@ const Signup = ({ setToken }) => {
               handleChange(event, "username");
             }}
             value={userInfo.username}
+            required
           />
           <input
             type="email"
@@ -57,6 +64,7 @@ const Signup = ({ setToken }) => {
               handleChange(event, "email");
             }}
             value={userInfo.email}
+            required
           />
           <input
             type="password"
@@ -66,7 +74,10 @@ const Signup = ({ setToken }) => {
               handleChange(event, "password");
             }}
             value={userInfo.password}
+            required
           />
+
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
 
           <button type="submit">S'inscrire</button>
         </form>

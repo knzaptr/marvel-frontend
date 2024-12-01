@@ -38,10 +38,8 @@ const Login = ({ setToken }) => {
       }
     } catch (error) {
       if (error.response.status === 400) {
-        // je fais appraître un message d'erreur
         setErrorMessage("Adresse mail ou mot de passe incorrect !");
       } else {
-        // Si je tombe dans le catch pour une raison inconnue
         setErrorMessage("Une erreur est survenue, veuillez réessayer !");
       }
       console.log(error.response);
@@ -69,12 +67,13 @@ const Login = ({ setToken }) => {
             required
           />
 
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
+
           <button type="submit">Se connecter</button>
         </form>
         <Link to="/signup">
           <p>Pas encore de compte ? Inscris-toi !</p>
         </Link>
-        {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
       </div>
     </main>
   );
