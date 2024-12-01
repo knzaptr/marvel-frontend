@@ -1,11 +1,11 @@
+import "./Characters.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import ComicCharElement from "../../components/ComicCharElement/ComicCharElement";
-import "./Characters.css";
 import Filters from "../../components/Filters/Filters";
 import Shield from "../../assets/img/shield.png";
 
-const Characters = () => {
+const Characters = ({ token, setFavList, favList }) => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -72,6 +72,23 @@ const Characters = () => {
 
         setNbTotal(response.data.count);
         setData(response.data);
+
+        if (token) {
+          const responseFav = await axios.get(
+            `${import.meta.env.VITE_DATA}/favourite`,
+            {
+              headers: {
+                authorization: "Bearer " + token,
+              },
+            }
+          );
+
+          const newFavList = responseFav.data.results.map(
+            (item) => item.favouriteCharCom._id
+          );
+
+          setFavList(newFavList);
+        }
         setIsLoading(false);
       } catch (error) {
         console.log(error.response);
@@ -79,7 +96,7 @@ const Characters = () => {
     };
 
     fetchData();
-  }, [limit, page, search]);
+  }, [limit, page, search, setFavList, token]);
 
   return isLoading ? (
     <main className="isloading-page">
@@ -106,6 +123,7 @@ const Characters = () => {
                 description={character.description}
                 type="character"
                 favObject={character}
+                inFav={favList.includes(character._id)}
               />
             );
           })}

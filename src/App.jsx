@@ -14,19 +14,52 @@ import Favourite from "./pages/favourite/Favourite";
 
 function App() {
   const [token, setToken] = useState(Cookies.get("token") || null);
+  const [favList, setFavList] = useState([]);
 
   return (
     <>
       <Router>
         <Header token={token} setToken={setToken} />
         <Routes>
-          <Route path="/" element={<Characters />} />
-          <Route path="/comics" element={<Comics />} />
+          <Route
+            path="/"
+            element={
+              <Characters
+                token={token}
+                setFavList={setFavList}
+                favList={favList}
+              />
+            }
+          />
+          <Route
+            path="/comics"
+            element={
+              <Comics token={token} setFavList={setFavList} favList={favList} />
+            }
+          />
           <Route path="/comic/:comicId" element={<Comic />} />
-          <Route path="/character/:characterId" element={<Character />} />
+          <Route
+            path="/character/:characterId"
+            element={
+              <Character
+                token={token}
+                setFavList={setFavList}
+                favList={favList}
+              />
+            }
+          />
           <Route path="/signup" element={<Signup setToken={setToken} />} />
           <Route path="/login" element={<Login setToken={setToken} />} />
-          <Route path="/favourite" element={<Favourite token={token} />} />
+          <Route
+            path="/favourite"
+            element={
+              <Favourite
+                token={token}
+                setFavList={setFavList}
+                favList={favList}
+              />
+            }
+          />
         </Routes>
         <Footer />
       </Router>

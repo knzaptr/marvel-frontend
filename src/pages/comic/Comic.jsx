@@ -1,7 +1,7 @@
+import "./Comic.css";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "./Comic.css";
 import Shield from "../../assets/img/shield.png";
 import NotFoundImg from "../../assets/img/not_found.webp";
 

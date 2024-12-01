@@ -1,11 +1,10 @@
+import "./ComicCharElement.css";
 import { Link, useNavigate } from "react-router-dom";
 import { CgHeart } from "react-icons/cg";
 import { VscHeartFilled } from "react-icons/vsc";
 import NotFoundImg from "../../assets/img/not_found.webp";
-import "./ComicCharElement.css";
 import axios from "axios";
 import Cookies from "js-cookie";
-import { useState } from "react";
 
 const ComicCharElement = ({
   title,
@@ -14,10 +13,10 @@ const ComicCharElement = ({
   description,
   favObject,
   type,
+  inFav,
 }) => {
   const navigate = useNavigate();
   const token = Cookies.get("token");
-  const [isFavorite, setIsFavorite] = useState(false);
 
   const addToFav = async () => {
     if (token) {
@@ -31,8 +30,6 @@ const ComicCharElement = ({
             },
           }
         );
-
-        setIsFavorite(!isFavorite);
       } catch (error) {
         console.error("Erreur lors de l'ajout aux favoris", error);
       }
@@ -57,7 +54,7 @@ const ComicCharElement = ({
         </Link>
 
         <button className="addfav" onClick={addToFav}>
-          {isFavorite ? <VscHeartFilled /> : <CgHeart />}
+          {inFav ? <VscHeartFilled /> : <CgHeart />}
         </button>
       </div>
     </div>
