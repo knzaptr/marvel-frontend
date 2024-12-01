@@ -3,11 +3,13 @@
   .comic {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
 
     .image,
     .content {
       width: 40%;
+      height: 60%;
     }
 
     .image > img {
@@ -21,13 +23,14 @@
       flex-direction: column;
       gap: 40px;
       h2 {
-        font-size: 50px;
+        font-size: 40px;
         color: #ed181fdc;
       }
       p {
         color: white;
-        font-size: 25px;
+        font-size: 22px;
         line-height: 1.3;
+        text-align: justify;
       }
     }
   }

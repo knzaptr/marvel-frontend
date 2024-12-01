@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Comic.css";
 import Shield from "../../assets/img/shield.png";
+import NotFoundImg from "../../assets/img/not_found.webp";
 
 const Comic = () => {
   const { comicId } = useParams();
@@ -37,7 +38,11 @@ const Comic = () => {
         <div className="comic">
           <div className="image">
             <img
-              src={`${data.thumbnail.path}.${data.thumbnail.extension}`}
+              src={
+                data.thumbnail.path.includes("image_not_available")
+                  ? NotFoundImg
+                  : `${data.thumbnail.path}.${data.thumbnail.extension}`
+              }
               alt={data.title}
             />
           </div>

@@ -1,4 +1,5 @@
 .character {
+  padding: 0 30px;
   .character-info {
     .char-name {
       font-size: 150px;

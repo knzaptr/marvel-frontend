@@ -9,7 +9,7 @@ const Characters = () => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  const [limit, setLimit] = useState(20);
+  const [limit, setLimit] = useState(100);
   const [nbTotal, setNbTotal] = useState();
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState("");
