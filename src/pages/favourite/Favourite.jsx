@@ -56,35 +56,39 @@ const Favourite = ({ token, setFavList, favList }) => {
       <main className="favourite-page">
         <div className="container">
           <div className="favourites">
-            {data.map((fav) => {
-              return fav.type === "character" ? (
-                <ComicCharElement
-                  key={fav.favouriteCharCom._id}
-                  linkTo={`/character/${fav.favouriteCharCom._id}`}
-                  image={`${fav.favouriteCharCom.thumbnail.path}.${fav.favouriteCharCom.thumbnail.extension}`}
-                  title={fav.favouriteCharCom.name}
-                  description={fav.favouriteCharCom.description}
-                  type="character"
-                  favObject={fav.favouriteCharCom}
-                  inFav={favList.includes(fav.favouriteCharCom._id)}
-                  setFavList={setFavList}
-                  favList={favList}
-                />
-              ) : (
-                <ComicCharElement
-                  key={fav.favouriteCharCom._id}
-                  linkTo={`/comic/${fav.favouriteCharCom._id}`}
-                  image={`${fav.favouriteCharCom.thumbnail.path}.${fav.favouriteCharCom.thumbnail.extension}`}
-                  title={fav.favouriteCharCom.title}
-                  description={fav.favouriteCharCom.description}
-                  type="comic"
-                  favObject={fav.favouriteCharCom}
-                  inFav={favList.includes(fav.favouriteCharCom._id)}
-                  setFavList={setFavList}
-                  favList={favList}
-                />
-              );
-            })}
+            {data.length > 0 ? (
+              data.map((fav) => {
+                return fav.type === "character" ? (
+                  <ComicCharElement
+                    key={fav.favouriteCharCom._id}
+                    linkTo={`/character/${fav.favouriteCharCom._id}`}
+                    image={`${fav.favouriteCharCom.thumbnail.path}.${fav.favouriteCharCom.thumbnail.extension}`}
+                    title={fav.favouriteCharCom.name}
+                    description={fav.favouriteCharCom.description}
+                    type="character"
+                    favObject={fav.favouriteCharCom}
+                    inFav={favList.includes(fav.favouriteCharCom._id)}
+                    setFavList={setFavList}
+                    favList={favList}
+                  />
+                ) : (
+                  <ComicCharElement
+                    key={fav.favouriteCharCom._id}
+                    linkTo={`/comic/${fav.favouriteCharCom._id}`}
+                    image={`${fav.favouriteCharCom.thumbnail.path}.${fav.favouriteCharCom.thumbnail.extension}`}
+                    title={fav.favouriteCharCom.title}
+                    description={fav.favouriteCharCom.description}
+                    type="comic"
+                    favObject={fav.favouriteCharCom}
+                    inFav={favList.includes(fav.favouriteCharCom._id)}
+                    setFavList={setFavList}
+                    favList={favList}
+                  />
+                );
+              })
+            ) : (
+              <div> Pas encore de favori</div>
+            )}
           </div>
         </div>
       </main>
