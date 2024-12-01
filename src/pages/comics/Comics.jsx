@@ -118,7 +118,6 @@ const Comics = ({ setFavList, favList, token }) => {
             return (
               <ComicCharElement
                 key={comic._id}
-                id={comic._id}
                 linkTo={`/comic/${comic._id}`}
                 image={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
                 title={comic.title}

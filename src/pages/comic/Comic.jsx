@@ -16,8 +16,6 @@ const Comic = () => {
         const response = await axios.get(
           `${import.meta.env.VITE_DATA}/comic/${comicId}`
         );
-        console.log(response.data);
-
         setData(response.data);
         setIsLoading(false);
       } catch (error) {

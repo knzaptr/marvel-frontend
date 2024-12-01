@@ -62,7 +62,13 @@ const ComicCharElement = ({
     <div className="comic-char">
       <div className="imgBx">
         <img
-          src={image.includes("image_not_available") ? NotFoundImg : image}
+          src={
+            image.includes("image_not_available") ||
+            image ===
+              "http://i.annihil.us/u/prod/marvel/i/mg/f/60/4c002e0305708.gif"
+              ? NotFoundImg
+              : image
+          }
           alt={title}
         />
       </div>
