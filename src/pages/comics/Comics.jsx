@@ -126,6 +126,8 @@ const Comics = ({ setFavList, favList, token }) => {
                 type="comic"
                 favObject={comic}
                 inFav={favList.includes(comic._id)}
+                setFavList={setFavList}
+                favList={favList}
               />
             );
           })}

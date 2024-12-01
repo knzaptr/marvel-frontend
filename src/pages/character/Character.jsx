@@ -74,6 +74,8 @@ const Character = ({ token, setFavList, favList }) => {
                 type="comic"
                 favObject={comic}
                 inFav={favList.includes(comic._id)}
+                setFavList={setFavList}
+                favList={favList}
               />
             );
           })}

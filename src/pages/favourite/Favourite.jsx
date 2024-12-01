@@ -45,7 +45,7 @@ const Favourite = ({ token, setFavList, favList }) => {
     };
 
     fetchData();
-  }, [token, setFavList, setData]);
+  }, [token, setFavList]);
 
   return token ? (
     isLoading ? (
@@ -67,6 +67,8 @@ const Favourite = ({ token, setFavList, favList }) => {
                   type="character"
                   favObject={fav.favouriteCharCom}
                   inFav={favList.includes(fav.favouriteCharCom._id)}
+                  setFavList={setFavList}
+                  favList={favList}
                 />
               ) : (
                 <ComicCharElement
@@ -78,6 +80,8 @@ const Favourite = ({ token, setFavList, favList }) => {
                   type="comic"
                   favObject={fav.favouriteCharCom}
                   inFav={favList.includes(fav.favouriteCharCom._id)}
+                  setFavList={setFavList}
+                  favList={favList}
                 />
               );
             })}

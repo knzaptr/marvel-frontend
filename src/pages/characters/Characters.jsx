@@ -124,6 +124,8 @@ const Characters = ({ token, setFavList, favList }) => {
                 type="character"
                 favObject={character}
                 inFav={favList.includes(character._id)}
+                setFavList={setFavList}
+                favList={favList}
               />
             );
           })}

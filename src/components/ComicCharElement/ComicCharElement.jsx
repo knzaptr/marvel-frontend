@@ -7,13 +7,15 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 const ComicCharElement = ({
+  inFav,
   title,
   image,
   linkTo,
   description,
   favObject,
   type,
-  inFav,
+  setFavList,
+  favList,
 }) => {
   const navigate = useNavigate();
   const token = Cookies.get("token");
@@ -30,6 +32,24 @@ const ComicCharElement = ({
             },
           }
         );
+
+        if (token) {
+          const responseFav = await axios.get(
+            `${import.meta.env.VITE_DATA}/favourite`,
+            {
+              headers: {
+                authorization: "Bearer " + token,
+              },
+            }
+          );
+
+          const newFavList = responseFav.data.results.map(
+            (item) => item.favouriteCharCom._id
+          );
+
+          setFavList(newFavList);
+          console.log(favList);
+        }
       } catch (error) {
         console.error("Erreur lors de l'ajout aux favoris", error);
       }
@@ -54,7 +74,7 @@ const ComicCharElement = ({
         </Link>
 
         <button className="addfav" onClick={addToFav}>
-          {inFav ? <VscHeartFilled /> : <CgHeart />}
+          {inFav ? <VscHeartFilled /> : <CgHeart className="favIcon" />}
         </button>
       </div>
     </div>
