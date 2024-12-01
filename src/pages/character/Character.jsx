@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ComicCharElement from "../../components/ComicCharElement/ComicCharElement";
 import "./Character.css";
+import Shield from "../../assets/img/shield.png";
+
 const Character = () => {
   const { characterId } = useParams();
   const [dataChar, setDataChar] = useState(null);
@@ -31,7 +33,9 @@ const Character = () => {
     fetchData();
   }, [characterId]);
   return isLoading ? (
-    <main>chargement</main>
+    <main className="isloading-page">
+      <img className="isloading" src={Shield} alt="" />
+    </main>
   ) : (
     <main className="character">
       <div className="container">

@@ -53,6 +53,27 @@ a:hover {
   font-style: italic;
 }
 
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .isloading-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .isloading {
+      animation: logo-spin infinite 3s linear;
+      height: 100px;
+    }
+  }
+}
+
 @media (max-width: 1200px) {
   .container {
     margin: 0 auto;

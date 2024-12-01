@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ComicCharElement from "../../components/ComicCharElement/ComicCharElement";
 import "./Favourite.css";
+import Shield from "../../assets/img/shield.png";
 
 const Favourite = ({ token }) => {
   const [data, setData] = useState(null);
@@ -31,7 +32,9 @@ const Favourite = ({ token }) => {
 
   return token ? (
     isLoading ? (
-      <main>Chargement</main>
+      <main className="isloading-page">
+        <img className="isloading" src={Shield} alt="" />
+      </main>
     ) : (
       <main className="favourite-page">
         <div className="container">

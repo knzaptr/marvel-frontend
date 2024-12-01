@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import ComicCharElement from "../../components/ComicCharElement/ComicCharElement";
 import "./Comics.css";
 import Filters from "../../components/Filters/Filters";
+import Shield from "../../assets/img/shield.png";
 
 const Comics = () => {
   const [data, setData] = useState(null);
@@ -74,7 +75,9 @@ const Comics = () => {
   }, [page, limit, search]);
 
   return isLoading ? (
-    <main>chargement</main>
+    <main className="isloading-page">
+      <img className="isloading" src={Shield} alt="" />
+    </main>
   ) : (
     <main className="comics-page">
       <div className="container">
