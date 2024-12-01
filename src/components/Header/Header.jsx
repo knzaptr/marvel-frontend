@@ -13,7 +13,7 @@ const Header = ({ token, setToken }) => {
     <header>
       <div className="container">
         <Link to="/">
-          <img src={MarvelLogo} alt="" />
+          <img src={MarvelLogo} alt="logo Marvel" />
         </Link>
         <div className="menu">
           <nav>

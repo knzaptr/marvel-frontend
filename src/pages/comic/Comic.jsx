@@ -29,7 +29,7 @@ const Comic = () => {
 
   return isLoading ? (
     <main className="isloading-page">
-      <img className="isloading" src={Shield} alt="" />
+      <img className="isloading" src={Shield} alt="en chargement" />
     </main>
   ) : (
     <main className="comic-page">
@@ -38,7 +38,7 @@ const Comic = () => {
           <div className="image">
             <img
               src={`${data.thumbnail.path}.${data.thumbnail.extension}`}
-              alt=""
+              alt={data.title}
             />
           </div>
           <div className="content">

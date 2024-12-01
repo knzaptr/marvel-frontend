@@ -76,7 +76,7 @@ const Comics = () => {
 
   return isLoading ? (
     <main className="isloading-page">
-      <img className="isloading" src={Shield} alt="" />
+      <img className="isloading" src={Shield} alt="en chargement" />
     </main>
   ) : (
     <main className="comics-page">
