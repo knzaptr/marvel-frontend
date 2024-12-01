@@ -9,24 +9,5 @@
     align-items: center;
     flex-wrap: wrap;
     transform-style: preserve-3d;
-
-    /* .material-symbols-outlined {
-      vertical-align: middle;
-    }
-
-    .addfav {
-      background: none;
-      border: none;
-      cursor: pointer;
-      align-self: flex-end;
-      margin: 5px;
-      font-size: 1.5rem;
-      color: #d32f2f;
-      transition: color 0.3s;
-    }
-
-    .addfav:hover {
-      color: #b71c1c;
-    } */
   }
 }

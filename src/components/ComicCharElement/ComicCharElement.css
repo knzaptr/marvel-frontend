@@ -67,6 +67,20 @@
       text-decoration: underline;
     }
   }
+
+  .addfav {
+    background: none;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    font-size: 1.5rem;
+    color: #d32f2f;
+    transition: color 0.3s;
+  }
+
+  .addfav:hover {
+    color: #9e1919;
+  }
 }
 .comic-char:hover {
   height: 20rem;

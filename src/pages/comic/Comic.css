@@ -32,3 +32,35 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .comic-page {
+    .comic {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 35px;
+
+      .image,
+      .content {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .comic-page {
+    .comic {
+      .content {
+        h2 {
+          font-size: 30px;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
