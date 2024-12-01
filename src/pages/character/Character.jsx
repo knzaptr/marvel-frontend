@@ -41,7 +41,7 @@ const Character = () => {
       <div className="container">
         <div className="character-info">
           <div className="description">
-            <h2>{dataChar.name}</h2>
+            <h1 className="char-name">{dataChar.name}</h1>
             <p>{dataChar.description}</p>
           </div>
         </div>

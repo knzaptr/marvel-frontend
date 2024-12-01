@@ -134,9 +134,29 @@
 
   .comic-char:hover {
     height: 27rem;
-
     img {
       width: calc(600px / 2);
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .comic-char {
+    width: calc(400px / 2);
+    height: 22rem;
+
+    img {
+      min-width: initial;
+      width: calc(400px / 2);
+      height: 22rem;
+      object-fit: cover;
+    }
+  }
+
+  .comic-char:hover {
+    height: 22rem;
+    img {
+      width: calc(400px / 2);
     }
   }
 }

@@ -1,6 +1,6 @@
 .character {
   .character-info {
-    h2 {
+    .char-name {
       font-size: 150px;
       color: #ed181fdc;
     }
@@ -26,10 +26,12 @@
   }
 }
 
-.character {
-  @media (max-width: 769px) {
-    h2 {
-      font-size: 100px !important;
+@media (max-width: 769px) {
+  .character {
+    .character-info {
+      .char-name {
+        font-size: 100px;
+      }
     }
   }
 }
